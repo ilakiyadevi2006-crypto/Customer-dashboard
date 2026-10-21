@@ -1,64 +1,52 @@
-package com.example.CustomerDashboard
+package com.example.customer;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 @Entity
-public class Customer {
+@Table(name = "inventory_items")
+public class InventoryItem {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
+
+    @Column(nullable = false)
     private String name;
-    private String detail;
-    private String orderdetails;
-    private int orderdate;
-    private String note;
-    private String status;
 
-public Customer{
-}
-    public long getId() {
-        return id;
-    }
-    public String getName() {
-        return name;
-    }
-    public String getDetail() {
-        return detail;
-    }
-    public String getOrderdetails() {
-        return orderdetails;
-    }
-    public int getOrderdate() {
-        return orderdate;
-    }
-    public String getNote() {
-        return note;
-    }
-    public int getStatus() {
-        return status;
-    }
+    @Column(nullable = false)
+    private String category;
 
-    public void setId(long id) {
-        this.id = id;
-    }
-    public void setName(String name) {
-        this.name = name;
-    }
-    public void setDetails(String detail) {
-        this.detail = detail;
-    }
-    public void setOrderdetails(String orderdetails) {
-        this.orderdetails = orderdetails;
-    }
-    public void setOrderdate(int orderdate) {
-        this.orderdate= orderdate;
+    @Column(nullable = false)
+    private Integer quantity;
+
+    @Column(nullable = false)
+    private Integer minLimit;
+
+    public InventoryItem() {}
+
+    public Long getId() { return id; }
+    public void setId(Long id) { this.id = id; }
+
+    public String getName() { return name; }
+    public void setName(String name) { this.name = name; }
+
+    public String getCategory() { return category; }
+    public void setCategory(String category) { this.category = category; }
+
+    public Integer getQuantity() { return quantity; }
+    public void setQuantity(Integer quantity) { this.quantity = quantity; }
+
+    public Integer getMinLimit() { return minLimit; }
+    public void setMinLimit(Integer minLimit) { this.minLimit = minLimit; }
 }
-    public void setNote(String note) {
-        this.note= note;
-    }
-    public void setStatus(String status) {
-        this.status= status;
-    }
-}
+
+
+
+
+
+
+
+
+
+
 
