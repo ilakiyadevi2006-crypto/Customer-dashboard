@@ -1,0 +1,13 @@
+.container{
+    padding: 500px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+.body{
+    background-color: gray;
+}
+.h1{
+    font-size: large;
+    padding: auto;
+    font-display: auto;
+}
